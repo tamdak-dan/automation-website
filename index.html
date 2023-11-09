@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Ash Automation</title>
+    <title>Ash - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico.png">
 
     <!-- fonts from google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +54,7 @@
         <a class="work-link" href="#projects">Projects</a>
         <a class="services-link" href="#services">Services</a>
         <a class="contact-link" href="#contact">Contact</a>
-        <a class="linkedin-link" href="www.linkedin.com/in/daniel-ash-1953a4108">
+        <a class="linkedin-link" href="https://linkedin.com/in/daniel-ash-1953a4108">
           <img class="linkedin-logo" src="./src/images/icons/linkedin-logo.png" alt="">
         </a>
       </div>
@@ -221,11 +222,11 @@
     </div> -->
 
     <div id="projects" class="projects">
-      <p class="title" style="margin: 50px; margin-left: 0px;">Projects</p>
+      <p class="title" style="margin: 50px; margin-left: 0px;">Featured Projects</p>
       <div class="projects-container">
         <div class="proj-ex-large">
           <p class="proj-intro">
-            <b>Automated Tipping Conveyor <br> [ 2022 ]</b>
+            <b>Automated Tipping Conveyor <br> [ 2023 ]</b>
           </p>
           <img class="proj-img" src="src/images/project-images/tipping-conveyor/TC_Render.png" alt=""
                onclick="ToggleProjectPopup(1)">
@@ -237,11 +238,18 @@
           <img class="proj-img" src="src/images/project-images/braid-angle/BA_Iso.png" alt=""
                onclick="ToggleProjectPopup(2)">
         </div>
-        <div class="proj-ex-small">
+        <!-- <div class="proj-ex-small">
           <p class="proj-intro">
             <b>Engagement Ring <br> [ 2021 ]</b>
           </p>
           <img class="proj-img" src="src/images/project-images/engagement-ring/ER_Macro.jpg" alt=""
+               onclick="ToggleProjectPopup(3)">
+        </div> -->
+        <div class="proj-ex-small">
+          <p class="proj-intro">
+            <b>Electropolish <br> [ 2021 ]</b>
+          </p>
+          <img class="proj-img" src="src/images/project-images/electropolish/EP_code1.png" alt=""
                onclick="ToggleProjectPopup(3)">
         </div>
         <div class="proj-ex-large">
@@ -251,64 +259,210 @@
           <img class="proj-img" src="src/images/project-images/salt-bath/SB_ProjectImg.png" alt=""
                onclick="ToggleProjectPopup(4)">
         </div>
-        <div class="proj-ex-small">
-          <p class="proj-intro">
-            <b>Electropolish <br> [ 2021 ]</b>
-          </p>
-          <img class="proj-img" src="src/images/project-images/electropolish/EP_front-end.png" alt=""
-               onclick="ToggleProjectPopup(5)">
-        </div>
       </div>
     </div>
 
     <div id="proj-desc-popup" class="proj-desc-popup">
       <div id="project-1" class="project-content">
         <h1 class="project-title">Automated Tipping Conveyor</h1>
-        <p class="project-subtitle">[ 2022 | Cost: $50k | Savings: 140k/yr ]</p>
+        <p class="project-subtitle">[ 2023 | Cost: $50k | Savings: 140k/yr ]</p>
         <p class="project-description">
           This project was created in order to automate the bonding process of two plastic components which are 
-          part of a high-volume assembly. The average time an operator took to complete the task of applying glue, 
-          pressing the parts together, and curing the bond was around 1:30 - meaning it would take almost two full 
-          shifts to fufill a 300 unit work order! Our machine cut that time down drastically, allowing for a syringe 
+          part of a high-volume subassembly (~65K/yr and counting). The average time an operator took to complete the task of applying glue, 
+          pressing the parts together and curing the bond was around 1:30 - meaning it would take almost two full 
+          shifts to complete a 300 unit work order. Our machine cut that time down drastically, allowing for a syringe 
           to be completed every 15 seconds. This allowed for the work order to get completed in only a few hours 
-          instead of two days! <b>A 250% improvement.</b><br><br> This project was completed by my co-worker and I. 
+          instead of two days - <b>A 250% improvement.</b> This machine has been running issue-free in the cleanroom for 
+          the past 3-4 months and has made over 15k components (as of 10/23).
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/tipping-conveyor/TC_Render.png" alt="">
+        <p class="project-subtitle">Render of machine I made for use as HMI background</p>
+        <p class="project-description">
+          This project was completed by my co-worker and I. 
           He was in charge of the mechanical side of things and I did everything controls related. This included 
           selecting sensors and a system which would suit our needs, along with all of the programming and human 
           machine interface (HMI) work. This was the first project where I really got to dive into the design side 
           of the user interface and learn how to make a beautifiul and modern looking interface that people want to 
           use rather than the clunky and dated interfaces which are still so common on nearly all manufacturing 
-          equipment. If you're going to make a cool machine you might as well make the whole thing cool.
+          equipment.
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/tipping-conveyor/TC_MainScreen.png" alt="">
+        <p class="project-subtitle">Main operator screen with content added on top of render background</p>
+        <p class="project-description">
+          Pictured above is the main operator screen for the machine. I tried to keep the interface as simple as 
+          possible so it would be intuitive to use, while also providing enough useful information. All the operator 
+          needed to do was press the "ON" button and the machine would do the rest, counting passed/failed units and 
+          alerting for any errors and prompting the user if needed as seen in the image of an example error screen 
+          below.
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/tipping-conveyor/TC_SyringeErrorScreen.png" alt="">
+        <p class="project-subtitle">Error screen example - syringe presence</p>
+        <p class="project-description">
+          Handling the errors on this machine proved to be a bit of a challenge. There were many special scenarios which 
+          were dependent on timing and syringe locations, amoung other variables. For each error, this error screen 
+          would be populated with a unique error message and tasks to complete before allowing the user to restart the 
+          machine. 
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/tipping-conveyor/TC_ManualScreen.png" alt="">
+        <p class="project-subtitle">Manual operation screen</p>
+        <p class="project-description">
+          The final screen of this project is the manual operation screen. This screen is only accessable to technicians 
+          who have a unique login which can be entered by pressing the profile button in the bottom left corner on the 
+          main screen. This page allows the techs to set up the machine before a work order, as well as help with any 
+          troubleshooting if there are issues with the system. 
+          <br><br> 
+          Thanks for reading! If you have any questions or would like any further information on this project or are 
+          looking for some help with a project of your own, please feel free to reach out using the contact form at the 
+          bottom of the page. 
+        </p>
+        <p class="project-subtitle" style="padding-bottom: 15px;">
+          *Due to company policy no true images of the machine, documentation, or mechanical systems may be shown
         </p>
       </div>
       <div id="project-2" class="project-content">
         <h1 class="project-title">Automated Braid Angle Measurement</h1>
         <p class="project-subtitle">[ 2021 | Cost: $10k ]</p>
         <p class="project-description">
-          braid angle meas
+          The project for this fixture was given to me as a way to check if our vertical braiding machines 
+          were calibrated at the beginning of a work order. This was originally planned because of issues 
+          with braids being out of spec for whole lots due to improper machine calibration. Unfortunately 
+          after I had validated and released this piece of equipment it was de-prioritized due to lack of 
+          space and then canceled because better machine maintenance had seemed to be solving the issue and 
+          the camera system could be better utilized elsewhere. Although it was hard to see my work be 
+          sidelined, it made sense to not implement an unnessary step to the manufacturing process. I also 
+          learned a lot about vision systems and lighting, and since it is not released I can share more of 
+          this project than I otherwise would be able to. 
+          <br><br>
+          The operation of this fixture was very simple: he mandrel would be placed in the locating fixture, 
+          and the camera would automatically verify if the pick angle of the braid was in spec and relay a 
+          "pass" or "fail" to the user. 
         </p>
+        <img class="proj-content-img" src="src/images/project-images/braid-angle/BA_Overall.jpg" alt="">
+        <p class="project-subtitle">Overall image of the assembled fixture</p>
+        <p class="project-description">
+          For this project I used a Cognex In-Sight 8000 series camera with In-Sight explorer to configure 
+          the software. The fixture also had a screen where the user could monitor the output of the camera. 
+          The screen also displayed the value of the 3 angles being measured and the average which the result 
+          of the test was based on.  
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/braid-angle/BA_AngleMeas.jpg" alt="">
+        <p class="project-subtitle">Screen of passing measurement</p>
         <!-- <iframe height="315"
           src="./src/images/project-images/braid-angle/BA_Video.mp4">
         </iframe> -->
       </div>
+      <!-- <div id="project-3" class="project-content">
+        <h1 class="project-title">Coming Soon</h1>
+        <p class="project-subtitle">[ | ]</p>
+      </div> -->
       <div id="project-3" class="project-content">
-        <h1 class="project-title">Engagement Ring</h1>
-        <p class="project-subtitle">[ 2021 | machine cost: remainder of life ]</p>
+        <h1 class="project-title">Electropolish</h1>
+        <p class="project-subtitle">[ 2021 | Cost: $15k | Savings: $50K ]</p>
         <p class="project-description">
-          this be the engagement ring
+          This was one of my first projects after starting at Inari. I worked with a senior engineer in charge 
+          of developing nitenol processing capabilities in house, and helped build a system for electropolishing 
+          (a chemical process for removing sharp edges). He directed me on what he needed the system to do and I 
+          created a control system and user interface to allow him to carry on with his process development. The 
+          main functions of the system were to allow the user to create a voltage profile which would be applied 
+          to the component through the control of a power supply. The system was also to monitor acid temp and 
+          store data for later review. The voltage and amperage data were also plotted vs time to give the user a 
+          visual representation that could be reviewed - this could be seen on the "Scanning" tab. 
+          <br><br>
+          Since this was very early on, I had not established a standard for controllers yet. Since this 
+          application required large amounts of fast and presice data collection, we decided to go with a NI 
+          CompactDAQ.
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/electropolish/EP_Cdaq.webp" alt="">
+        <p class="project-subtitle">Image of NI CompactDAQ from NI website</p>
+        <p class="project-description">
+          Since this was a relatively simple project in terms of the I/O needed, we decided to go witha 4-slot 
+          chassis. For this machine we needed to use a 0-10v output to control the voltage and amperage limit 
+          of the power supply, monitor the voltage/amperage using a 0-10v input, and monitor acid temp with a 
+          thermocouple. 
+          <br><br>
+          After selecting the controller, the next challenge was figuring out how to use the graphical 
+          programming interface of LabVIEW. 
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/electropolish/EP_code2.png" alt="">
+        <p class="project-subtitle">Screenshot of LabVIEW program</p>
+        <p class="project-description">
+          This image shows one small chunk of the code which I wrote for this system. It took some time to get 
+          used to the style of graphical programming but by the end I felt comfortable with it and was creating 
+          my own function blocks to keep everything organized. My overall impression of the LabVIEW environment 
+          was that it was great for data collection and creating applications with simple interfaces, but the 
+          graphical style of programming can get out of hand pretty quickly. I probably spent just as much time 
+          organizing everything to make it readable as I did with the actual programming. 
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/electropolish/EP_frontendNologo.png" alt="">
+        <p class="project-subtitle">Screenshot of user interface</p>
+        <p class="project-description">
+          Lastly, this is the image of the user interface for the machine. Here the user can set up their 
+          desired parameters and monitor machine function. The program also records and stores all voltage, 
+          current, and acid temp data for each run for later review if necessary. There is also a "Scanning" 
+          tab which displays a graph of voltage and curernt vs time to be used for analysis as well. 
+          <br><br>
+          Overall this was a very successful project, saving us at least $50k on machine costs while also 
+          keeping the technology in-house to be able to add new features as needed. This setup was key for 
+          determining the ideal parameters for the EP process. 
+        </p>
+        <p class="project-subtitle" style="padding-bottom: 15px;">
+          *Due to company policy no true images of the machine, documentation or mechanical systems may be shown
         </p>
       </div>
       <div id="project-4" class="project-content">
         <h1 class="project-title">Salt Bath</h1>
         <p class="project-subtitle">[ 2022 | Cost: $30k | Savings: $200K ]</p>
         <p class="project-description">
-          SALT BATH
+          This system was created to aid in increasing nitenol processing capabilities. Initially we looked into buying a 
+          pre-built solution but found that there weren't a lot of companies that sold salt bath machines for our scale and 
+          the quotes we were getting on the compatable systems were north of $200k with long lead times. Because of these 
+          reasons we decided it would be best if we built the system ourselves instead. 
+          <br><br> 
+          I led this project with a 
+          team of about 5 other engineers and technicians, all contributing to the successful completion of this machine. My 
+          role was the controller programming, human-machine interface (HMI), electrical panel and wiring, and overseeing the 
+          completion of other tasks taken on by other individuals. 
         </p>
-      </div>
-      <div id="project-5" class="project-content">
-        <h1 class="project-title">Electropolish</h1>
-        <p class="project-subtitle">[ 2021 | Cost: $15k | Savings: $50K ]</p>
+        <img class="proj-content-img" src="src/images/project-images/salt-bath/SB_MainScreen.png" alt="">
+        <p class="project-subtitle">Main HMI screen</p>
         <p class="project-description">
-          Electropolish
+          The image above shows the main screen of the HMI where the control and monitoring of the machine takes palce. The 
+          right edge of the screen shows the navigation tab where the user can go to the recipe screen, lock the doors, or 
+          turn on the "party lights" which activate the LED strip to pulse purple and orange (Inari colors) when the machine 
+          is idle. The bottom buttons allow the user to control the x-y gantry which carries a basket for components to be 
+          heat set. In the top right of the screen the user can select a recipe to use and the active recipe will be displayed.
+          Also on the left side is all the relevant machine data and statuses taken into account before allowing a part to be 
+          heat set. In the middle of the screen there are also controls for the quenching tank as well as statuses for the 
+          state of both the salt and the quench water. 
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/salt-bath/SB_RecipePage.png" alt="">
+        <p class="project-subtitle">Recipe screen</p>
+        <p class="project-description">
+          Next is the recipe screen. This screen allows the user to add, edit, and delete recipes. When adding or editing 
+          recipes, the appropriate keyboard is displayed for category of data: ex. when entering a name the full keypad is 
+          available, though when entering a number only the keypad is shown. All recipes on this page are processed though 
+          a recipe function block I created for this application and have been able to reuse for future projects. 
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/salt-bath/SB_ElecCabinet.jpg" alt="">
+        <p class="project-subtitle">Electrical Cabinet</p>
+        <p class="project-description">
+          Pictured above is the electrical cabinet for the salt bath. The bottom row handles incoming power and everything 
+          needing a 120v source including a relay for controlling power to the salt furnace, a solid state relay for 
+          controlling the heater for the quenching water, and power supplies for the controller, inputs/outputs (I/O), and 
+          motors. The middle row handles 24v power distribition and signals from I/O, as well as a regen clamp for the 
+          motors on the far right. The top row shows the Beckhoff CX-5120 outfitted with several digital I/O terminal, a 
+          4-20ma input terminal for a temperature sensor, and a terminal for controlling an LED strip (EL2564). I learned 
+          on this project that wires on Beckhoff controllers should only be landed from below to avoid obstructing the 
+          status LEDs of the terminals which I was guilty of doing this time around. Next to the controller are relays 
+          controlling the pump and valves for the quench tank, a thermocouple to 4-20ma converter, and a DC-DC converter 
+          for the LED strip. Congrats if you made it through this ramble. 
+          <br><br>
+          Thanks for reading! If you have any questions or would like any further information on this project or are 
+          looking for some help with a project of your own, please feel free to reach out using the contact form at the 
+          bottom of the page. 
+        </p>
+        <p class="project-subtitle" style="padding-bottom: 15px;">
+          *Due to company policy no true images of the machine, documentation or mechanical systems may be shown
         </p>
       </div>
     </div>

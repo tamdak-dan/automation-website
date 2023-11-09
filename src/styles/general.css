@@ -23,11 +23,12 @@ body {
   position: relative;
   background-color: rgb(211, 211, 211);
   
-  cursor: url('../images/icons/gripper-cursor.png'), auto;
+  /* cursor: url('../images/icons/gripper-cursor.png'), auto; */
 }
 
 a {
-  cursor: url('../images/icons/gripper-cursor-closed.png'), auto;
+  /* cursor: url('../images/icons/gripper-cursor-closed.png'), auto; */
+  cursor: pointer;
 }
 
 .intro-section, .about-section, 

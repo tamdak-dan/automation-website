@@ -101,7 +101,8 @@
 }
 
 .down-arrow-anchor:hover {
-  cursor: url('../images/icons/gripper-cursor-closed.png'), auto;
+  /* cursor: url('../images/icons/gripper-cursor-closed.png'), auto; */
+  cursor: pointer;
   border: #000000 2px solid;
   overflow: visible;
 }
