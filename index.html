@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+<<<<<<< HEAD:vite-app/index.html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+=======
+>>>>>>> b7bad972b6bf8010228d80e31acff5ce52f4f2e4:index.html
     <title>Ash - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico.png">
 
@@ -35,6 +39,7 @@
     <link rel="stylesheet" href="src/styles/projects2.css">
     <link rel="stylesheet" href="src/styles/contact.css">
     <link rel="stylesheet" href="src/styles/marquee.css">
+    <link rel="stylesheet" href="src/styles/mobile.css">
 
     <!-- jquery lib -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -52,7 +57,7 @@
       <div class="link-container">
         <a class="about-link" href="#about">About</a>
         <a class="work-link" href="#projects">Projects</a>
-        <a class="services-link" href="#services">Services</a>
+        <!-- <a class="services-link" href="#services">Services</a> -->
         <a class="contact-link" href="#contact">Contact</a>
         <a class="linkedin-link" href="https://linkedin.com/in/daniel-ash-1953a4108">
           <img class="linkedin-logo" src="./src/images/icons/linkedin-logo.png" alt="">
@@ -64,7 +69,7 @@
     <div id="intro" class="intro-section">
       <!-- <div id="intro-marquee" class="intro-marquee"></div> -->
       <p class="intro-msg-1">Hi, I'm Dan</p>
-      <p class="intro-msg-2">and I make machines</p>
+      <!-- <p class="intro-msg-2">and I make machines</p> -->
       <div class="down-arrow-container">
         <img class="down-arrow" src="./src/images/icons/down-arrow.png" alt="">
         <a class="down-arrow-anchor" href="#about"></a>
@@ -272,8 +277,9 @@
           pressing the parts together and curing the bond was around 1:30 - meaning it would take almost two full 
           shifts to complete a 300 unit work order. Our machine cut that time down drastically, allowing for a syringe 
           to be completed every 15 seconds. This allowed for the work order to get completed in only a few hours 
-          instead of two days - <b>A 250% improvement.</b> This machine has been running issue-free in the cleanroom for 
-          the past 3-4 months and has made over 15k components (as of 10/23).
+          instead of two days - <b>A 250% improvement.</b> With this added efficiency, they can now complete 3 work orders
+          of 300 units in a single 8hr shift with a single operator. This machine has been running issue-free in the cleanroom 
+          since July 2023.
         </p>
         <img class="proj-content-img" src="src/images/project-images/tipping-conveyor/TC_Render.png" alt="">
         <p class="project-subtitle">Render of machine I made for use as HMI background</p>
@@ -299,7 +305,7 @@
         <p class="project-subtitle">Error screen example - syringe presence</p>
         <p class="project-description">
           Handling the errors on this machine proved to be a bit of a challenge. There were many special scenarios which 
-          were dependent on timing and syringe locations, amoung other variables. For each error, this error screen 
+          were dependent on timing and syringe locations, among other variables. For each error, this error screen 
           would be populated with a unique error message and tasks to complete before allowing the user to restart the 
           machine. 
         </p>
@@ -323,19 +329,30 @@
         <h1 class="project-title">Automated Braid Angle Measurement</h1>
         <p class="project-subtitle">[ 2021 | Cost: $10k ]</p>
         <p class="project-description">
-          The project for this fixture was given to me as a way to check if our vertical braiding machines 
-          were calibrated at the beginning of a work order. This was originally planned because of issues 
-          with braids being out of spec for whole lots due to improper machine calibration. Unfortunately 
-          after I had validated and released this piece of equipment it was de-prioritized due to lack of 
-          space and then canceled because better machine maintenance had seemed to be solving the issue and 
-          the camera system could be better utilized elsewhere. Although it was hard to see my work be 
-          sidelined, it made sense to not implement an unnessary step to the manufacturing process. I also 
-          learned a lot about vision systems and lighting, and since it is not released I can share more of 
-          this project than I otherwise would be able to. 
+          This fixture was given to me as a way to verify the calibration of our vertical braiding machines
+          automatically. This was originally planned because of issues 
+          with braids being out of spec and ruining entire lots due to improper machine calibration.
           <br><br>
-          The operation of this fixture was very simple: he mandrel would be placed in the locating fixture, 
-          and the camera would automatically verify if the pick angle of the braid was in spec and relay a 
-          "pass" or "fail" to the user. 
+          The operation of this fixture was very simple: the mandrel with a completed braid would be placed in the locating fixture, then
+          the camera would automatically identify the unit and verify if the pick angle of the braid was in spec, and finally the result
+          would be communicated to the user through the screen.
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/braid-angle/BA_Overall.jpg" alt="">
+        <p class="project-subtitle">Overall image of the assembled fixture</p>
+        <p class="project-description">
+          For this project I used a Cognex In-Sight 8200 camera with In-Sight explorer to configure 
+          the software. The fixture also had a screen where the user could monitor the output of the camera. 
+          The screen also displayed the value of the 3 angles being measured and the average which the result 
+          of the test was based on.  
+        </p>
+        <img class="proj-content-img" src="src/images/project-images/braid-angle/BA_AngleMeas.jpg" alt="">
+        <p class="project-subtitle">Screen of passing measurement</p>
+        <p class="project-description">
+          This photo shows what the operator would see which was the measurement of all 3 angles, along with the average.
+          <br><br>
+          Being one of my first builds when coming to Inari, I still had a lot more to learn (and still do). Although not the
+          most elegant looking solution, I was very happy with how the final project came out and how simple and painless This
+          tool was to use. 
         </p>
         <img class="proj-content-img" src="src/images/project-images/braid-angle/BA_Overall.jpg" alt="">
         <p class="project-subtitle">Overall image of the assembled fixture</p>
@@ -359,7 +376,7 @@
         <h1 class="project-title">Electropolish</h1>
         <p class="project-subtitle">[ 2021 | Cost: $15k | Savings: $50K ]</p>
         <p class="project-description">
-          This was one of my first projects after starting at Inari. I worked with a senior engineer in charge 
+          For this system I worked with a senior engineer in charge 
           of developing nitenol processing capabilities in house, and helped build a system for electropolishing 
           (a chemical process for removing sharp edges). He directed me on what he needed the system to do and I 
           created a control system and user interface to allow him to carry on with his process development. The 
@@ -375,7 +392,7 @@
         <img class="proj-content-img" src="src/images/project-images/electropolish/EP_Cdaq.webp" alt="">
         <p class="project-subtitle">Image of NI CompactDAQ from NI website</p>
         <p class="project-description">
-          Since this was a relatively simple project in terms of the I/O needed, we decided to go witha 4-slot 
+          Since this was a simple project in terms of the I/O needed, we decided to go witha 4-slot 
           chassis. For this machine we needed to use a 0-10v output to control the voltage and amperage limit 
           of the power supply, monitor the voltage/amperage using a 0-10v input, and monitor acid temp with a 
           thermocouple. 
